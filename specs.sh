@@ -1,3 +1,4 @@
 #!/bin/sh
 
-/usr/bin/env node specs.js $@
+
+/usr/bin/env NODE_PATH="./src" node specs.js $@
