@@ -1,6 +1,7 @@
 def run_specs
   system 'clear'
-  system %q|env NODE_PATH="./src" node specs.js|
+  # need to set PATH so nodelint can be found
+  system %Q|PATH="$PATH:/usr/local/share/npm/bin" rake|
 end
 
 watch('^(spec/(.*)\.js)') { |m| run_specs }
